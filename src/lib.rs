@@ -6,6 +6,7 @@ use axum::{extract::FromRequestParts, http::request::Parts};
 use error::ExtractionError;
 pub use leptos_reactive_axum_macros::reactive;
 
+/// used to extract request parts from handlers, should be used in conjunction with `leptos_reactive_axum_macros::reactive macro`
 pub async fn extract<T>() -> Result<T, ExtractionError>
 where
 	T: FromRequestParts<()>,
@@ -14,6 +15,7 @@ where
 	extract_with_state::<T, ()>(&()).await
 }
 
+/// used to extract request parts from handlers with state, should be used in conjunction with `leptos_reactive_axum_macros::reactive macro`
 pub async fn extract_with_state<T, S>(state: &S) -> Result<T, ExtractionError>
 where
 	T: FromRequestParts<S>,
