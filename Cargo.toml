@@ -1,0 +1,29 @@
+[workspace]
+members = ["macros", "."]
+
+[package]
+name = "leptos_reactive_axum"
+version = "0.1.0"
+edition = "2021"
+description = "reactive context for axum handlers"
+authors = ["davidontop <me@davidon.top>"]
+readme = "README.md"
+documentation = "https://docs.rs/leptos_reactive_axum"
+license = "MIT"
+repository = "https://git.davidon.top/public/leptos_reactive_axum.git"
+
+[dependencies]
+leptos_reactive_axum_macros = { path = "./macros" }
+leptos_reactive = { version = "0.6", features = ["ssr"] }
+axum = "0.7"
+scopeguard = "1.2.0"
+thiserror = "1.0.61"
+http = "1.1.0"
+
+[features]
+nightly = ["leptos_reactive/nightly"]
+
+[dev-dependencies]
+axum-test = "15.1.0"
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
