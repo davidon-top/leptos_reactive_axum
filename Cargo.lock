@@ -657,7 +657,7 @@ dependencies = [
 
 [[package]]
 name = "leptos_reactive_axum_macros"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "proc-macro2",
  "quote",
