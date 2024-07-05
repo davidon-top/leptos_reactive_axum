@@ -641,7 +641,7 @@ dependencies = [
 
 [[package]]
 name = "leptos_reactive_axum"
-version = "0.1.0"
+version = "1.0.0"
 dependencies = [
  "axum",
  "axum-test",
@@ -652,6 +652,7 @@ dependencies = [
  "serde_json",
  "thiserror",
  "tokio",
+ "tower",
 ]
 
 [[package]]

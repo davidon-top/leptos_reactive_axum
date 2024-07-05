@@ -1,6 +1,6 @@
 [package]
 name = "leptos_reactive_axum_macros"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
 description = "reactive context for axum handlers"
 authors = ["davidontop <me@davidon.top>"]

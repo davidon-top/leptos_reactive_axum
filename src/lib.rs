@@ -1,9 +1,12 @@
 pub mod error;
+#[cfg(feature = "middleware")]
+pub mod middleware;
 
 use std::fmt::Debug;
 
 use axum::{extract::FromRequestParts, http::request::Parts};
 use error::ExtractionError;
+#[cfg(feature = "macros")]
 pub use leptos_reactive_axum_macros::reactive;
 
 /// used to extract request parts from handlers, should be used in conjunction with `leptos_reactive_axum_macros::reactive macro`
