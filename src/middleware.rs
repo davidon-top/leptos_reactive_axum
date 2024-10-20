@@ -4,7 +4,7 @@ use axum::{extract::Request, response::Response};
 use tower::{Layer, Service};
 
 /// ```rust
-/// axum::Router::new().layer(ReactiveLayer);
+/// axum::Router::<()>::new().layer(leptos_reactive_axum::middleware::ReactiveLayer);
 /// ```
 #[derive(Clone)]
 pub struct ReactiveLayer;
